@@ -28,8 +28,6 @@
       font-family: "Nunito", sans-serif;
       color: var(--text);
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
       padding: 48px 20px;
       background:
         radial-gradient(circle at 85% 0%, rgba(143, 165, 130, 0.18), transparent 45%),
@@ -37,6 +35,31 @@
         var(--bg);
     }
 
+    ```css
+/* Center the page consistently across browsers */
+body {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 440px;
+  }
+}
+```
     .card { width: 100%; max-width: 420px; text-align: center; }
 
     /* ---------- Logo ---------- */
