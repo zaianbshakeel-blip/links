@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark">
   <title>Zainii | Web Designer</title>
 
@@ -210,6 +210,206 @@
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; transition: none !important; }
     }
+  
+/* ---------- Responsive Design: All Devices ---------- */
+
+/* Prevent unexpected width and overflow */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: clamp(20px, 5vw, 48px) clamp(12px, 4vw, 24px);
+  overflow-wrap: break-word;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  min-width: 0;
+  margin-inline: auto;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.links,
+.services,
+.contact-form {
+  width: 100%;
+  min-width: 0;
+}
+
+.links a {
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-wrap: anywhere;
+}
+
+.services li {
+  overflow-wrap: anywhere;
+}
+
+.contact-form input:not([type="checkbox"]),
+.contact-form textarea,
+.contact-form button {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  min-height: 52px;
+}
+
+/* ---------- Small Mobile Phones ---------- */
+@media (max-width: 360px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .logo {
+    width: 78px;
+    height: 78px;
+    font-size: 42px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .tagline {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .links a {
+    padding: 14px 12px;
+    font-size: 15px;
+  }
+
+  .services {
+    padding: 20px 15px 12px;
+    border-radius: 22px;
+  }
+
+  .services h2,
+  .contact-form h2 {
+    font-size: 20px;
+  }
+
+  .services li {
+    padding: 13px 0 13px 22px;
+    font-size: 15px;
+  }
+
+  .services li span {
+    font-size: 13px;
+  }
+
+  .contact-form {
+    padding: 22px 15px;
+    border-radius: 22px;
+  }
+
+  .contact-form input:not([type="checkbox"]),
+  .contact-form textarea {
+    padding: 13px 12px;
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* ---------- Regular Mobile Phones ---------- */
+@media (min-width: 361px) and (max-width: 600px) {
+  body {
+    padding: 28px 16px;
+  }
+
+  .card {
+    max-width: 420px;
+  }
+
+  .logo {
+    width: 86px;
+    height: 86px;
+    font-size: 46px;
+  }
+}
+
+/* ---------- Tablets ---------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    padding: 40px 28px;
+  }
+
+  .card {
+    max-width: 460px;
+  }
+
+  .services,
+  .contact-form {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* ---------- Laptops and Large Screens ---------- */
+@media (min-width: 1025px) {
+  body {
+    padding: 48px 32px;
+  }
+
+  .card {
+    max-width: 440px;
+  }
+}
+
+/* ---------- Touch Devices ---------- */
+@media (hover: none) {
+  .links a:hover,
+  .contact-form button:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Accessibility ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
   </style>
 </head>
 <body>
