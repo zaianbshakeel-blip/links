@@ -78,7 +78,52 @@
       color: var(--bg);
       transform: translateY(-3px);
     }
+    /* ---------- Services card ---------- */
+    .services {
+      margin: 6px 0 24px;
+      padding: 24px 22px 14px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      text-align: left;
+    }
 
+    .services h2 {
+      font-family: "Lora", serif;
+      font-size: 22px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .services ul { list-style: none; }
+
+    .services li {
+      position: relative;
+      padding: 14px 0 14px 28px;
+      border-top: 1px solid var(--line);
+      font-weight: 600;
+    }
+
+    .services li:first-child { border-top: none; }
+
+    .services li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      margin-top: -5px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .services li span {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--muted);
+    }
     /* ---------- Contact form ---------- */
     .contact-form {
       margin-top: 30px;
@@ -174,11 +219,22 @@
     <h1>Zainii</h1>
     <p class="tagline">Websites for small businesses</p>
 
-    <div class="links">
+       <div class="links">
       <a href="https://zaianbshakeel-blip.github.io/my_portfolio">My Portfolio</a>
+    </div>
 
+    <section class="services">
+      <h2>What I do</h2>
+      <ul>
+        <li>Website Design &amp; Development <span>Clean, modern and mobile friendly</span></li>
+        <li>UI/UX Design <span>Layouts that are easy to use</span></li>
+        <li>Website Redesign <span>Give your old website a fresh look</span></li>
+      </ul>
+    </section>
 
+    <div class="links">
       <a href="https://instagram.com/zainiiwebstudio">Instagram</a>
+      <a href="https://www.linkedin.com/in/zainab-shakeel-620670408">LinkedIn</a>
     </div>
 
     <!-- Contact form: messages arrive in your email (Web3Forms) -->
