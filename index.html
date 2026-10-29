@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>Zainii | Web Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------- Colors (change these to restyle everything) ---------- */
+    :root {
+      --bg: #0e1310;          /* page background */
+      --panel: #161d18;       /* form card */
+      --line: #2b372d;        /* borders */
+      --text: #f2efe6;        /* main text */
+      --muted: #a9b3a5;       /* small text */
+      --sage: #8fa582;        /* brand green */
+      --gold: #d4af5a;        /* hover / focus */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Nunito", sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 48px 20px;
+      background:
+        radial-gradient(circle at 85% 0%, rgba(143, 165, 130, 0.18), transparent 45%),
+        radial-gradient(circle at 0% 100%, rgba(212, 175, 90, 0.10), transparent 45%),
+        var(--bg);
+    }
+
+    .card { width: 100%; max-width: 420px; text-align: center; }
+
+    /* ---------- Logo ---------- */
+    .logo {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: var(--sage);
+      color: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Lora", serif;
+      font-weight: 700;
+      font-size: 52px;
+      box-shadow: 0 0 0 6px rgba(143, 165, 130, 0.18);
+      animation: pop 0.7s ease;
+    }
+
+    h1 { font-family: "Lora", serif; font-size: 28px; }
+    .tagline { margin: 6px 0 32px; color: var(--muted); }
+
+    /* ---------- Link buttons ---------- */
+    .links a {
+      display: block;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+      border: 2px solid var(--sage);
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    .links a:hover {
+      background: var(--sage);
+      color: var(--bg);
+      transform: translateY(-3px);
+    }
+
+    /* ---------- Contact form ---------- */
+    .contact-form {
+      margin-top: 30px;
+      padding: 26px 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      text-align: left;
+    }
+
+    .contact-form h2 {
+      font-family: "Lora", serif;
+      font-size: 22px;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+
+    .contact-form p {
+      font-size: 14px;
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: #6f7b6e; }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    .contact-form textarea { resize: vertical; }
+
+    .contact-form button {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 40px;
+      background: var(--sage);
+      color: var(--bg);
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    .hidden { display: none; }
+
+    footer {
+      margin-top: 28px;
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ---------- Animation ---------- */
+    @keyframes pop {
+      from { opacity: 0; transform: scale(0.8); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="logo">Z</div>
+    <h1>Zainii</h1>
+    <p class="tagline">Websites for small businesses</p>
+
+    <div class="links">
+      <a href="https://zaianbshakeel-blip.github.io/my_portfolio">My Portfolio</a>
+
+      <!-- Add your cafe project link here when it is online:
+      <a href="YOUR-CAFE-LINK">Cafe Website (Concept Project)</a>
+      -->
+
+      <a href="https://instagram.com/zainiiwebstudio">Instagram</a>
+    </div>
+
+    <!-- Contact form: messages arrive in your email (Web3Forms) -->
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <h2>Send me a message</h2>
+      <p>Tell me about your project and I will reply by email.</p>
+
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" rows="4" placeholder="What kind of website do you need?" required></textarea>
+
+      <!-- Hidden settings: paste your Web3Forms access key below -->
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      <input type="hidden" name="subject" value="New message from your link page">
+      <input type="checkbox" name="botcheck" class="hidden">
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <footer>© 2026 Zainii Web Studio</footer>
+  </div>
+
+</body>
+</html>
